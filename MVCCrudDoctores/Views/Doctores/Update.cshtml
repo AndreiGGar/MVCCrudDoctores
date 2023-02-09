@@ -1,0 +1,21 @@
+﻿@model Doctor
+
+<h4 class="mb-4">Edit Dept</h4>
+
+<button class="btn btn-primary mb-4">
+    <a asp-controller="Departamentos" asp-action="Index" class="link-dark">Volver a Index</a>
+</button>
+
+<form method="post" class="form">
+    <input type="hidden" name="doctor_no" class="form-control" required value="@Model.DOCTOR_NO"/>
+    <input type="hidden" name="hospital_cod" class="form-control" required value="@Model.HOSPITAL_COD" />
+    <label>Apellido</label>
+    <input type="text" name="apellido" class="form-control" required value="@Model.APELLIDO" />
+    <label>Especialidad</label>
+    <input type="text" name="especialidad" class="form-control" required value="@Model.ESPECIALIDAD"/>
+    <label>Localidad</label>
+    <input type="text" name="salario" class="form-control" required value="@Model.SALARIO" />
+    <button class="btn btn-info">Edit</button>
+</form>
+
+<h4>@ViewData["MENSAJE"]</h4>
